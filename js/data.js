@@ -25,6 +25,8 @@ var DataBase  = function() {
 
     data.push(newData);
     saveToStorage(data);
+
+    return newData;
   };
 
   var getItem = function(id) {
@@ -32,7 +34,7 @@ var DataBase  = function() {
 
     for (var i = 0; i < data.length; i++) {
       if (data[i].id == id) {
-        return data;
+        return data[i];
       } else  {
         return 'Not Found User';
       }
@@ -44,7 +46,7 @@ var DataBase  = function() {
 
     for (var i = 0; i < data.length; i++) {
       if (data[i].email == email && data[i].password == password) {
-        return data;
+        return data[i];
       } else  {
         return 'Not Found User';
       }
@@ -54,6 +56,8 @@ var DataBase  = function() {
   var getAllItems = function(id){
     return getToLocalStorage();
   };
+
+  // @private metods
 
   function saveToStorage(object) {
     var dataJson = JSON.stringify(object);
