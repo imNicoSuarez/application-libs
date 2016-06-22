@@ -5,11 +5,11 @@ var DataBase  = function() {
   var createItem = function(object){
     var data = getToLocalStorage();
 
-
+    data = data == null ? [] : data;
 
     try {
       var newData = {
-        id : data == null ? 1 : data.length+1,
+        id : data.length+1,
         name: object.name,
         last_name: object.last_name,
         email: object.email,
