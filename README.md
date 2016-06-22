@@ -22,6 +22,7 @@ Crear Item
              github: 'https://github.com/pepe',
              facebook: 'https://facebook.com/pepe',
              twitter: 'https://twitter.com/pepe',
+             avatar: 'pepe.png'
             };
 
   data.createItem(obj)

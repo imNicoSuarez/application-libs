@@ -16,7 +16,8 @@ var DataBase  = function() {
         twitter: object.twitter,
         facebook: object.facebook,
         github: object.github,
-        password: object.password
+        password: object.password,
+        avatar: object.avatar
       }
     } catch (e) {
       console.log('Datos obtenidos incorrectos.');
