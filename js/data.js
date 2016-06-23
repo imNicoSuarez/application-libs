@@ -67,7 +67,7 @@ var DataBase  = function() {
   }
 
   var removeToSession = function() {
-    removeToSession();
+    removeSession();
   }
 
   // @private metods
@@ -90,7 +90,7 @@ var DataBase  = function() {
     return JSON.parse(localStorage.getItem('sessionData'));
   }
 
-  function removeToSession() {
+  function removeSession() {
     localStorage.setItem('sessionData', '');
   }
 
