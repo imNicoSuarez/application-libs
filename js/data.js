@@ -33,26 +33,25 @@ var DataBase  = function() {
   var getItem = function(id) {
     var data = getToLocalStorage();
 
+    console.log(data.length);
     for (var i = 0; i < data.length; i++) {
-      console.log(data);
       if (data[i].id == id) {
         return data[i];
-      } else  {
-        return 'Not Found User';
       }
     }
+
+    return 'Not Found User';
   }
 
   var findByEmailAndPassword = function(email, password) {
     var data = getToLocalStorage();
-    console.log(data);
+
     for (var i = 0; i < data.length; i++) {
       if (data[i].email == email && data[i].password == password) {
         return data[i];
-      } else  {
-        return 'Not Found User';
       }
     }
+    return 'Not Found User';
   }
 
   var getAllItems = function(id){
